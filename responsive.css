@@ -7,6 +7,9 @@
 }
 
 @media (max-width: 575px) {
+    .heading {
+    font-size: 24px;}
+
    #homebanner1{
         display: none;
     }
