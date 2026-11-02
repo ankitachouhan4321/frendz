@@ -1,0 +1,17 @@
+@media (max-width:1400px) {
+.side-space{
+    padding-left: unset;
+    padding-right: unset;
+}
+    
+}
+
+@media (max-width: 575px) {
+   #homebanner1{
+        display: none;
+    }
+
+    #homebanner2{
+        display: block;
+    }
+}
