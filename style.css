@@ -150,10 +150,11 @@ html, body{
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  padding: 10px;
 }
 
 .tf-logo img {
-  width: 190px;
+  width: 155px;
   max-width: 100%;
   height: auto;
   display: block
@@ -270,7 +271,7 @@ color: var(--tf-black);
   }
 
   .tf-logo img {
-    width: 150px;
+    width: 120px;
   }
 
   .tf-nav {
@@ -414,12 +415,6 @@ color: var(--tf-black);
     flex-shrink: 0;
 }
 
-.tf-logo img {
-    width: 180px;
-    max-width: 100%;
-    height: auto;
-}
-
 /* Right Side Actions */
 .tf-header-actions {
     display: flex;
@@ -465,7 +460,7 @@ color: var(--tf-black);
     }
 
     .tf-logo img {
-        width: 155px;
+        width: 145px;
     }
 
     .tf-nav {
