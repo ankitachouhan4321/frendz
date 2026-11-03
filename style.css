@@ -1533,7 +1533,6 @@ footer end */
     width: 100%;
     background-color: #f2f3f5;
 }
-
 /* Grid Layout */
 .mid-banner-2-grid {
     display: grid;
@@ -1710,3 +1709,770 @@ footer end */
         transition: none;
     }
 }
+
+
+/* =========================================
+   FRENDZ BENEFITS STRIP START
+========================================= */
+
+.frendz-benefits {
+    width: 100%;
+    overflow: hidden;
+    background: #f5f9fc;
+    border-top: 2px solid var(--primary, #10446d);
+    border-bottom: 2px solid var(--primary, #10446d);
+}
+
+/* Marquee */
+.frendz-benefits-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Moving Track */
+.frendz-benefits-track {
+    display: flex;
+    width: max-content;
+    animation: frendzBenefitsMarquee 30s linear infinite;
+}
+
+/* Repeated Group */
+.frendz-benefits-content {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+/* Benefit Item */
+.frendz-benefits-item {
+    min-width: 300px;
+    padding: 26px 35px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-right: 1px solid rgba(16, 68, 109, 0.12);
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Background */
+.frendz-benefits-item:hover {
+    background: #e8f3fa;
+}
+
+/* Benefit Icon */
+.frendz-benefits-icon {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary, #10446d);
+    border-radius: 50%;
+    color: var(--primary, #10446d);
+    font-size: 22px;
+    transition: all 0.35s ease;
+}
+
+/* Icon Hover */
+.frendz-benefits-item:hover .frendz-benefits-icon {
+    background: var(--primary, #10446d);
+    color: #ffffff;
+}
+
+/* Text */
+.frendz-benefits-text h6 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary, #10446d);
+    white-space: nowrap;
+}
+
+.frendz-benefits-text p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #687b8a;
+    white-space: nowrap;
+}
+
+/* Pause Animation on Hover */
+.frendz-benefits-marquee:hover .frendz-benefits-track,
+.frendz-benefits-marquee:focus-within .frendz-benefits-track {
+    animation-play-state: paused;
+}
+
+/* Infinite Right-to-Left Animation */
+@keyframes frendzBenefitsMarquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+
+    .frendz-benefits-item {
+        min-width: 270px;
+        padding: 22px 25px;
+        gap: 14px;
+    }
+
+    .frendz-benefits-icon {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+        font-size: 20px;
+    }
+
+    .frendz-benefits-text h6 {
+        font-size: 15px;
+    }
+
+    .frendz-benefits-text p {
+        font-size: 12px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .frendz-benefits-track {
+        animation-duration: 24s;
+    }
+
+    .frendz-benefits-item {
+        min-width: 245px;
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .frendz-benefits-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+        font-size: 17px;
+    }
+
+    .frendz-benefits-text h6 {
+        font-size: 14px;
+    }
+
+    .frendz-benefits-text p {
+        font-size: 11px;
+    }
+
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .frendz-benefits-track {
+        animation: none;
+    }
+
+    .frendz-benefits-marquee {
+        overflow-x: auto;
+    }
+
+}
+
+/* =========================================
+   FRENDZ BENEFITS STRIP END
+========================================= */
+
+
+
+/* =========================================
+   FRENDZ TESTIMONIAL SECTION START
+========================================= */
+
+.fr-testimonials {
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+/* Header */
+.fr-testimonial-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.fr-testimonial-label {
+    display: inline-block;
+    color: var(--secondary, #1687b4);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fr-testimonial-intro {
+    color: #687580;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 10px 0 0;
+}
+
+/* Swiper */
+.fr-testimonial-swiper {
+    width: 100%;
+    padding: 5px 3px 20px;
+}
+
+.fr-testimonial-swiper .swiper-slide {
+    height: auto;
+}
+
+/* Review Card */
+.fr-review-card {
+    background: #ffffff;
+    border: 1px solid #e8edf2;
+    border-radius: 16px;
+    padding: 25px;
+    height: 100%;
+    min-height: 275px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.045);
+    transition: all 0.3s ease;
+}
+
+.fr-review-card:hover {
+    border-color: #cbdce8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    transform: translateY(-3px);
+}
+
+/* User Information */
+.fr-review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.fr-review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+/* Customer Avatar */
+.fr-review-avatar {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    background: #e8f1f8;
+    border-radius: 50%;
+    color: var(--primary, #10446d);
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Customer Name */
+.fr-review-user-info h3 {
+    color: #202b36;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 3px;
+}
+
+.fr-review-user-info span {
+    display: block;
+    color: #9099a2;
+    font-size: 12px;
+}
+
+/* Google Style Stars */
+.fr-review-rating {
+    margin-bottom: 15px;
+}
+
+.fr-review-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fbbc04;
+    font-size: 15px;
+}
+
+/* Review Description */
+.fr-review-text {
+    color: #4f5b66;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0 0 22px;
+    flex-grow: 1;
+}
+
+/* Card Bottom */
+.fr-review-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid #edf0f3;
+    padding-top: 15px;
+}
+
+.fr-review-bottom span {
+    color: var(--primary, #10446d);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.fr-review-bottom i {
+    color: #dce6ee;
+    font-size: 23px;
+}
+
+/* Navigation */
+.fr-testimonial-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.fr-testimonial-prev,
+.fr-testimonial-next {
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    color: var(--primary, #10446d);
+    border: 1px solid #dbe5ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fr-testimonial-prev:hover,
+.fr-testimonial-next:hover {
+    background: var(--primary, #10446d);
+    border-color: var(--primary, #10446d);
+    color: #fff;
+}
+
+.fr-testimonial-navigation .swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+
+    .fr-review-card {
+        padding: 22px;
+        min-height: 260px;
+    }
+
+    .fr-testimonial-header {
+        margin-bottom: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+
+    .fr-testimonial-header {
+        align-items: center;
+        margin-bottom: 22px;
+    }
+
+    .fr-testimonial-label {
+        font-size: 10px;
+    }
+
+    .fr-testimonial-intro {
+        font-size: 12px;
+    }
+
+    .fr-review-card {
+        padding: 20px;
+        min-height: 255px;
+        border-radius: 12px;
+    }
+
+    .fr-review-user-info h3 {
+        font-size: 14px;
+    }
+
+    .fr-review-text {
+        font-size: 12px;
+    }
+
+    .fr-testimonial-prev,
+    .fr-testimonial-next {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .fr-testimonial-navigation {
+        gap: 7px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .fr-review-card {
+        transition: none;
+    }
+}
+
+/* =========================================
+   FRENDZ TESTIMONIAL SECTION END
+========================================= */
+
+
+/* ====================================
+   FRENDZ REELS SECTION
+==================================== */
+
+.fr-reels-section {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Header */
+.fr-reels-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.fr-reels-label {
+    display: inline-block;
+    color: var(--secondary, #1687b4);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fr-reels-heading p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #687580;
+    margin: 10px 0 0;
+}
+
+/* Swiper */
+.fr-reels-swiper {
+    width: 100%;
+    padding: 5px 2px 15px;
+}
+
+.fr-reels-swiper .swiper-slide {
+    height: auto;
+}
+/* Facebook Embed Cards */
+
+.fr-reel-card.fr-reel-embed {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #e5e9ee;
+}
+
+.fr-reel-embed iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border: 0;
+    background: #f5f5f5;
+}
+
+.fr-reel-external {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 8px;
+    background: #fff;
+    color: var(--primary, #10446d);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fr-reel-external:hover {
+    color: var(--secondary, #1687b4);
+}
+/* Reel Link */
+.fr-reel-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Image */
+.fr-reel-link > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.fr-reel-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Dark Gradient */
+.fr-reel-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.04) 35%,
+        rgba(0,0,0,0.2) 60%,
+        rgba(0,0,0,0.85) 100%
+    );
+    pointer-events: none;
+}
+
+/* Center Play Button */
+.fr-reel-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.94);
+    color: var(--primary, #10446d);
+    font-size: 18px;
+    z-index: 2;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+}
+
+.fr-reel-card:hover .fr-reel-play {
+    background: var(--primary, #10446d);
+    color: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Facebook Icon */
+.fr-reel-social {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: #1877f2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 2;
+}
+
+/* Bottom Content */
+.fr-reel-content {
+    position: absolute;
+    bottom: 18px;
+    left: 14px;
+    right: 14px;
+    z-index: 2;
+}
+
+.fr-reel-content h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.fr-reel-content span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #e6edf4;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.fr-reel-content span i {
+    font-size: 10px;
+}
+
+/* Navigation */
+.fr-reels-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.fr-reels-prev,
+.fr-reels-next {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--primary, #10446d);
+    border: 1px solid #dbe5ee;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fr-reels-prev:hover,
+.fr-reels-next:hover {
+    background: var(--primary, #10446d);
+    border-color: var(--primary, #10446d);
+    color: #fff;
+}
+
+.fr-reels-navigation .swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+
+/* Embedded Facebook Reel */
+.fr-reel-embed {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e5e9ee;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: auto;
+    height: 100%;
+}
+
+.fr-reel-embed iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border: 0;
+    background: #f5f5f5;
+}
+
+.fr-reel-external {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    color: var(--primary, #10446d);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #fff;
+}
+
+.fr-reel-external:hover {
+    color: var(--secondary, #1687b4);
+}
+
+
+/* Tablet */
+@media (max-width: 991px) {
+    .fr-reels-header {
+        margin-bottom: 22px;
+    }
+
+    .fr-reel-card {
+        border-radius: 12px;
+    }
+
+    .fr-reel-content h3 {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .fr-reels-label {
+        font-size: 10px;
+    }
+
+    .fr-reels-heading p {
+        font-size: 12px;
+    }
+
+    .fr-reels-prev,
+    .fr-reels-next {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .fr-reels-navigation {
+        gap: 7px;
+    }
+
+    .fr-reel-play {
+        width: 44px;
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .fr-reel-content {
+        left: 12px;
+        right: 12px;
+        bottom: 14px;
+    }
+
+    .fr-reel-content h3 {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fr-reel-link > img,
+    .fr-reel-play {
+        transition: none;
+    }
+}
+
