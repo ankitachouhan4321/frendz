@@ -12,6 +12,10 @@ font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
+
+html, body{
+    overflow-x: hidden;
+}
 /* main-btn start */
 .main-btn{
     background: transparent;
@@ -2153,7 +2157,7 @@ footer end */
 ==================================== */
 
 .fr-reels-section {
-    background: #ffffff;
+    background: #f2f3f5;
     overflow: hidden;
 }
 
